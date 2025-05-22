@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sea Level Predictor</title>
+</head>
+<body>
+    <h2>Sea Level Prediction</h2>
+    <form method="POST" action="/predict">
+        <label for="year">Enter Year:</label>
+        <input type="number" name="year" required>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <p>{{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
+
